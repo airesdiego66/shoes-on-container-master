@@ -32,6 +32,7 @@ namespace ProductCatalogApi
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
+            //swagger
             services.AddSwaggerGen(options =>
             {
                 options.DescribeAllEnumsAsStrings();
