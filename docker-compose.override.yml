@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+  catalogapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    
