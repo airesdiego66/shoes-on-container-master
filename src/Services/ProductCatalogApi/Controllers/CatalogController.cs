@@ -106,7 +106,6 @@ namespace ProductCatalogApi.Controllers
             return Ok(model);
         }
 
-
         [HttpGet]
         [Route("items/{id:int}")]
         public async Task<IActionResult> GetItemById(int id)
@@ -124,7 +123,6 @@ namespace ProductCatalogApi.Controllers
 
             return NotFound();
         }
-
 
         // GET api/[controller]/CatalogTypes
         [HttpGet]
@@ -216,7 +214,7 @@ namespace ProductCatalogApi.Controllers
         private List<CatalogItem> ChangeUriPlaceholder(List<CatalogItem> items)
         {
             var baseUri = _settings.ExternalCatalogBaseUrl;
-
+            
             items.ForEach(x =>
             {
                 x.PictureUrl = x.PictureUrl.Replace("http://externalcatalogbaseurltobereplaced", baseUri);
