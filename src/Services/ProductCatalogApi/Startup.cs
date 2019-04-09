@@ -42,8 +42,7 @@ namespace ProductCatalogApi
 
             //var connectionString = $"Server={dataBaseServer}{databasePort};Database={dataBaseName};User={user};Password={password}";
             var connectionString = $"Server=192.168.99.100,1445;Database=CatalogDb;User ID=sa;Password=ProductApi@;";
-
-
+            
             //Configuring Connection Resiliency: 
             //https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
             services.AddDbContext<CatalogContext>(options =>
